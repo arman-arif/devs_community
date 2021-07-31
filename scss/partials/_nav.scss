@@ -1,7 +1,10 @@
 nav {
+  width: 100%;
   height: $nav_height;
-  background-color: $color_light;
+  background-color: $color_white;
   border-top: 3px solid $color_green;
+  position: fixed;
+  z-index: 99999999;
 
   &.nav {
     box-shadow: 0 0 5px $color_gray;
@@ -43,7 +46,7 @@ nav {
 
     .button {
       margin-right: 15px;
-      margin-bottom: 3px;
+      margin-bottom: 7px;
     }
   }
 }
