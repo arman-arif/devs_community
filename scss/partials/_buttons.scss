@@ -1,10 +1,16 @@
 .button,
-a.button {
+a.button,
+button.button,
+input[type="button"].button,
+input[type="submit"].button {
+  margin: 5px 0;
   padding: 10px 20px;
-  border: none !important;
   border-radius: 4px !important;
   text-decoration: none !important;
-  color: $color_light !important;
+  color: $color_white !important;
+  text-align: center;
+  display: inline-block;
+  font-size: 15px !important;
 
   &:hover {
     cursor: pointer;
@@ -12,8 +18,12 @@ a.button {
 
   &.small {
     padding: 5px 15px !important;
-    border-radius: 4px !important;
-    font-size: 14px;
+    border-radius: 3px !important;
+    font-size: 14px !important;
+  }
+  &.block {
+    display: block !important;
+    width: 100%;
   }
 
   &.green,
@@ -21,21 +31,31 @@ a.button {
     @include button($color_green, $color_green2);
   }
 
-  &.primary {
+  &.primary,
+  &.blue {
     @include button($color_primary, $color_primary2);
   }
 
-  &.secondary {
+  &.danger,
+  &.red {
+    @include button($color_red, lighten($color_red, 5));
+  }
+
+  &.secondary,
+  &.yellow {
     @include button($color_secondary, $color_secondary2);
   }
 
-  &.muted {
+  &.muted,
+  &.gray {
     @include button($color_gray, $color_gray2);
   }
 
-  &.lightblue,
-  &.login {
-    @include button(lighten($color_blue3, 20%), lighten($color_blue3, 25%));
-    color: darken($color_blue3, 30%) !important;
+  &.dark {
+    @include button($color_dark, $color_black);
+  }
+
+  &.lightblue {
+    @include button($color_blue3, darken($color_blue3, 10%));
   }
 }
