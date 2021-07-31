@@ -8,7 +8,7 @@
 }
 
 body {
-  background-color: $color_light;
+  background-color: $color_white;
   color: $color_dark;
   font-family: "Montserrat", Helvetica, sans-serif;
 }
@@ -20,7 +20,18 @@ a {
   }
 }
 
+button,
+input[type="button"],
+input[type="submit"] {
+  font-family: "Montserrat", Helvetica, sans-serif !important;
+}
+
 .wrapper {
   max-width: $wrapper_width;
   margin: 0 auto;
+}
+
+main {
+  position: relative;
+  top: $nav_height;
 }
