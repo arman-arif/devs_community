@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Devs Community</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="https://unpkg.com/feather-icons@4.28.0/dist/feather.min.js"></script>
+    <script src="js/feather.min.js"></script>
   </head>
 
   <body>
@@ -24,7 +24,7 @@
             </li>
 
             <li class="nav-item login-section">
-              <a href="#login" class="button login small"> Log in </a>
+              <a href="#login" class="button blue small outline"> Log in </a>
               <a href="#signup" class="button primary small"> Sign up </a>
 
               <a href="#" class="nav-link">
@@ -36,9 +36,11 @@
       </nav>
     </header>
     <main class="wrapper">
-      <div class="sidebar">
+      <div class="sidebar hide">
         <ul>
-          <li><a href="#home">Home</a></li>
+          <li class="active">
+            <a href="#home"> <i data-feather="home"></i> Home </a>
+          </li>
           <li>
             <a href="#questions">
               <i data-feather="help-circle"></i> Questions
@@ -52,11 +54,56 @@
           </li>
         </ul>
       </div>
+
+      <div class="container">
+        <p>Hello world!</p>
+        <button class="button blue gradient small block">
+          Gradient Button
+        </button>
+        <input
+          type="button"
+          value="Button"
+          class="button blue gradient small"
+        />
+        <a href="#" class="button green gradient small"> Button </a>
+        <a href="#" class="button yellow gradient small"> Button </a>
+        <a href="#" class="button red gradient small"> Button </a>
+        <a href="#" class="button gray gradient small"> Button </a>
+        <a href="#" class="button dark gradient small"> Button </a>
+        <a href="#" class="button lightblue gradient small"> Button </a>
+
+        <button class="button blue small block">Normal Button</button>
+        <button class="button primary small">Button</button>
+        <button class="button secondary small">Button</button>
+        <button class="button success small">Button</button>
+        <button class="button danger small">Button</button>
+        <button class="button muted small">Button</button>
+        <button class="button dark small">Button</button>
+        <button class="button lightblue small">Button</button>
+
+        <button class="button blue small outline block">Outline Button</button>
+        <button class="button primary small outline">Button</button>
+        <button class="button secondary small outline">Button</button>
+        <button class="button success small outline">Button</button>
+        <button class="button danger small outline">Button</button>
+        <button class="button muted small outline">Button</button>
+        <button class="button dark small outline">Button</button>
+        <button class="button lightblue small outline">Button</button>
+
+        <button class="button primary">Button</button>
+        <button class="button secondary">Button</button>
+        <button class="button success">Button</button>
+        <button class="button danger">Button</button>
+        <button class="button muted">Button</button>
+        <button class="button dark">Button</button>
+        <button class="button lightblue">Button</button>
+      </div>
     </main>
     <footer></footer>
 
     <script>
       feather.replace();
     </script>
+    <script src="js/app.js"></script>
   </body>
 </html>
