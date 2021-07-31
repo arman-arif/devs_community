@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // mixins for buttons
 @mixin button($bgcolor, $bgcolor2) {
   background-color: $bgcolor !important;
@@ -50,5 +52,10 @@
 
 //HEX to RGBA
 @function toRgba($color, $opacity: 100) {
-  @return rgba(red($color), green($color), blue($color), $opacity/100);
+  @return rgba(
+    red($color),
+    green($color),
+    blue($color),
+    math.div($opacity, 100)
+  );
 }
