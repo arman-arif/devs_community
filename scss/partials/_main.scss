@@ -1,28 +1,54 @@
 .sidebar {
-  // background: lighten($color_light, 0%);
-  padding: 30px 10px;
+  // background: lighten($color_white, 0%);
+  padding: $container_padding 0;
   width: 170px;
   height: 100vh;
+  background: $color_white;
+  background: linear-gradient(
+    90deg,
+    $color_white 0%,
+    $color_white 75%,
+    toRgba($color_light, 10) 100%
+  );
   border-right: 1px solid $color_gray;
-  position: fixed;
+  position: absolute;
+  z-index: 1;
 
   ul {
     list-style: none;
 
     li {
-      padding: 8px 2px;
+      padding: 5px 0;
+
+      &.active a,
+      &.active a:hover {
+        background: $color_light;
+        color: $color_black;
+        width: 100%;
+        border-right: 4px solid $color_green;
+        font-weight: 600;
+      }
 
       a {
         text-decoration: none;
         font-weight: 500;
-        color: #5c6a79;
+        color: $text_gray;
         font-size: 15px;
         display: flex;
         align-items: center;
+        padding: 6px 10px;
 
         &:hover {
-          color: $color_dark;
+          background: linear-gradient(
+            90deg,
+            toRgba($color_light, 10) 0%,
+            toRgba($color_light, 100) 70%,
+            toRgba($color_light, 100) 100%
+          );
+          color: $color_black;
+          border-right: 4px solid $color_yellow;
         }
+
         svg.feather {
           width: 20px !important;
           height: 20px !important;
@@ -31,4 +57,17 @@
       }
     }
   }
+
+  .hide {
+    right: 50vw;
+    opacity: 0;
+    visibility: none;
+  }
+}
+
+.container {
+  width: $wrapper_width - $sidebar_width;
+  position: relative;
+  left: 170px;
+  padding: $container_padding;
 }
