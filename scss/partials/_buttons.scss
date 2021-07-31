@@ -1,0 +1,41 @@
+.button,
+a.button {
+  padding: 10px 20px;
+  border: none !important;
+  border-radius: 4px !important;
+  text-decoration: none !important;
+  color: $color_light !important;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.small {
+    padding: 5px 15px !important;
+    border-radius: 4px !important;
+    font-size: 14px;
+  }
+
+  &.green,
+  &.success {
+    @include button($color_green, $color_green2);
+  }
+
+  &.primary {
+    @include button($color_primary, $color_primary2);
+  }
+
+  &.secondary {
+    @include button($color_secondary, $color_secondary2);
+  }
+
+  &.muted {
+    @include button($color_gray, $color_gray2);
+  }
+
+  &.lightblue,
+  &.login {
+    @include button(lighten($color_blue3, 20%), lighten($color_blue3, 25%));
+    color: darken($color_blue3, 30%) !important;
+  }
+}
