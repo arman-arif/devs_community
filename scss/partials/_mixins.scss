@@ -1,8 +1,54 @@
+// mixins for buttons
 @mixin button($bgcolor, $bgcolor2) {
   background-color: $bgcolor !important;
+  border: 1px solid $bgcolor !important;
 
   &:hover {
     background-color: $bgcolor2 !important;
-    //color: darken($color_light, 5%) !important;
+    border: 1px solid $bgcolor2 !important;
+    //color: darken($color_white, 5%) !important;
   }
+
+  @include button-outline($bgcolor);
+  @include button-gradient($bgcolor);
+}
+
+@mixin button-outline($color) {
+  &.outline {
+    background-color: transparent !important;
+    color: $color !important;
+    border: 1px solid $color !important;
+
+    &:hover {
+      background-color: lighten($color, 10) !important;
+      border: 1px solid lighten($color, 10) !important;
+      color: $color_white !important;
+    }
+  }
+}
+
+@mixin button-gradient($color) {
+  &.gradient {
+    background: linear-gradient(
+      180deg,
+      toRgba(lighten($color, 50%)) 0%,
+      toRgba(lighten($color, 20%)) 3%,
+      toRgba($color) 9%,
+      toRgba($color) 100%
+    ) !important;
+    &:hover {
+      background: linear-gradient(
+        180deg,
+        toRgba(lighten($color, 60%)) 0%,
+        toRgba(lighten($color, 30%)) 3%,
+        toRgba(lighten($color, 5%)) 9%,
+        toRgba(lighten($color, 5%)) 100%
+      ) !important;
+    }
+  }
+}
+
+//HEX to RGBA
+@function toRgba($color, $opacity: 100) {
+  @return rgba(red($color), green($color), blue($color), $opacity/100);
 }
