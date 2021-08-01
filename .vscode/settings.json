@@ -6,6 +6,11 @@
             "format": "expanded",
             "extensionName": ".css",
             "savePath": "/css"
+        },
+        {
+            "format": "compressed",
+            "extensionName": ".min.css",
+            "savePath": "/css"
         }
     ],
     "editor.formatOnSave": true,
