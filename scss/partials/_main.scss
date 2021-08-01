@@ -1,5 +1,10 @@
+main {
+  position: relative;
+  top: $nav_height;
+}
+
 .sidebar {
-  // background: lighten($color_white, 0%);
+  background: $color_white;
   padding: $container_padding 0;
   width: 170px;
   height: 100vh;
@@ -12,7 +17,9 @@
   );
   border-right: 1px solid $color_gray;
   position: absolute;
+  left: 0;
   z-index: 1;
+  transition: all 700ms ease;
 
   ul {
     list-style: none;
@@ -37,6 +44,7 @@
         display: flex;
         align-items: center;
         padding: 6px 10px;
+        transition: 500ms ease;
 
         &:hover {
           background: linear-gradient(
@@ -47,6 +55,7 @@
           );
           color: $color_black;
           border-right: 4px solid $color_yellow;
+          transition: 500ms ease-in;
         }
 
         svg.feather {
@@ -58,16 +67,10 @@
     }
   }
 
-  .hide {
-    right: 50vw;
+  &.hide {
+    left: -70px !important;
     opacity: 0;
     visibility: none;
+    transition: all 700ms ease;
   }
-}
-
-.container {
-  width: $wrapper_width - $sidebar_width;
-  position: relative;
-  left: 170px;
-  padding: $container_padding;
 }
