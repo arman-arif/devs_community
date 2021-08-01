@@ -11,9 +11,11 @@ input[type="submit"].button {
   text-align: center;
   display: inline-block;
   font-size: 15px !important;
+  transition: all 500ms;
 
   &:hover {
     cursor: pointer;
+    transition: all 500ms ease-in;
   }
 
   &.small {
