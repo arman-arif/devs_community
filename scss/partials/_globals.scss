@@ -12,26 +12,3 @@ body {
   color: $color_dark;
   font-family: $default_font;
 }
-
-a {
-  color: $color_primary;
-  &:hover {
-    color: $color_primary2;
-  }
-}
-
-button,
-input[type="button"],
-input[type="submit"] {
-  font-family: $default_font !important;
-}
-
-.wrapper {
-  max-width: $wrapper_width;
-  margin: 0 auto;
-}
-
-main {
-  position: relative;
-  top: $nav_height;
-}
