@@ -56,6 +56,6 @@
     red($color),
     green($color),
     blue($color),
-    math.div($opacity, 100)
+    $opacity / 100 // math.div($opacity, 100)
   );
 }
