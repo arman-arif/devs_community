@@ -1,0 +1,27 @@
+a {
+  color: $color_primary;
+  &:hover {
+    color: $color_primary2;
+  }
+}
+
+button,
+input[type="button"],
+input[type="submit"] {
+  font-family: $default_font !important;
+}
+
+.wrapper {
+  width: $wrapper_width;
+  margin: 0 auto;
+  position: relative;
+}
+
+.container {
+  width: $wrapper_width - $sidebar_width;
+  height: 100%;
+  position: relative;
+  left: 170px;
+  padding: $container_padding;
+  // border-left: 1px solid $color_gray;
+}
