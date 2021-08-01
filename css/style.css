@@ -161,8 +161,8 @@ main {
       -ms-flex-align: center;
           align-items: center;
   padding: 6px 10px;
-  -webkit-transition: 500ms ease;
-  transition: 500ms ease;
+  -webkit-transition: none;
+  transition: none;
 }
 
 .sidebar ul li a:hover {
@@ -170,8 +170,8 @@ main {
   background: linear-gradient(90deg, rgba(236, 240, 241, 0.1) 0%, #ecf0f1 70%, #ecf0f1 100%);
   color: #010f2c;
   border-right: 4px solid #f39c12;
-  -webkit-transition: 500ms ease-in;
-  transition: 500ms ease-in;
+  -webkit-transition: display 400ms ease-in;
+  transition: display 400ms ease-in;
 }
 
 .sidebar ul li a svg.feather {
@@ -183,7 +183,7 @@ main {
 .sidebar.hide {
   left: -70px !important;
   opacity: 0;
-  visibility: none;
+  visibility: hidden;
   -webkit-transition: all 700ms ease;
   transition: all 700ms ease;
 }
