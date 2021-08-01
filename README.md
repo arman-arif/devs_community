@@ -3,3 +3,9 @@
 </p>
 
 # Devs Community - Web Application
+
+> See to the live preview of current stage of the design,
+>
+> [Click here](https://devscommunity.netlify.app/) or <https://devscommunity.netlify.app> here
+
+<!-- ![Devs Commnuity Logo](assets/logo.png) -->
