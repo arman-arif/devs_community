@@ -44,7 +44,7 @@ main {
         display: flex;
         align-items: center;
         padding: 6px 10px;
-        transition: 500ms ease;
+        transition: none;
 
         &:hover {
           background: linear-gradient(
@@ -55,7 +55,7 @@ main {
           );
           color: $color_black;
           border-right: 4px solid $color_yellow;
-          transition: 500ms ease-in;
+          transition: display 400ms ease-in;
         }
 
         svg.feather {
@@ -70,7 +70,7 @@ main {
   &.hide {
     left: -70px !important;
     opacity: 0;
-    visibility: none;
+    visibility: hidden;
     transition: all 700ms ease;
   }
 }
