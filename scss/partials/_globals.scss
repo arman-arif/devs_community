@@ -12,3 +12,20 @@ body {
   color: $color_dark;
   font-family: $default_font;
 }
+
+a {
+  color: $color_primary;
+  text-decoration: none;
+  &:hover {
+    color: $color_primary2;
+    text-decoration: underline;
+  }
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+  background: $color_gray2;
+  border: none;
+  margin: 5px 0;
+}
