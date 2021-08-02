@@ -21,12 +21,8 @@ $color_secondary2: $color_yellow2;
 $text_gray: #5c6a79;
 $text_dark: #2c3e50;
 
-// Sizes
-$wrapper_width: 1100px;
-$nav_height: 50px;
-
-$container_padding: 30px;
-$sidebar_width: 170px;
-
-// Fonts
-$default_font: "Montserrat", sans-serif;
+// Screen sizes
+$desktop_width: 1200px;
+$laptop_width: 1000px;
+$tablet_width: 750px;
+$mobile_width: 480px;
