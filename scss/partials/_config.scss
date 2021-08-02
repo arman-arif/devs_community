@@ -1,0 +1,40 @@
+// Sizes
+$wrapper_width: 1200px;
+$nav_height: 50px;
+$container_padding: 30px;
+$sidebar_width: 170px;
+
+// Times
+$short_trans: 200ms ease;
+$mid_trans: 400ms ease;
+$long_trans: 700ms ease;
+
+// Fonts
+$default_font: "Montserrat", sans-serif;
+
+//Responsive sizes
+$wrapper_width_list: (
+  desktop: 1000px,
+  laptop: 80%,
+  tablet: 90%,
+  mobile: 100%,
+);
+
+//HEX to RGBA
+@function to-rgba($color, $opacity: 100) {
+  @return rgba(
+    red($color),
+    green($color),
+    blue($color),
+    $opacity/100 //math.div($opacity,100)
+  );
+}
+
+// Set text colors
+@function set-text-color($color) {
+  @if lightness($color) > 70 {
+    @return $color_dark;
+  } @else {
+    @return $color_light;
+  }
+}
