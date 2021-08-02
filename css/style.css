@@ -1,13 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,700;1,200;1,300;1,400;1,500;1,700&display=swap");
-@use "sass:math";
-a {
-  color: #2980b9;
-}
-
-a:hover {
-  color: #3498db;
-}
-
 button,
 input[type="button"],
 input[type="submit"] {
@@ -15,13 +6,13 @@ input[type="submit"] {
 }
 
 .wrapper {
-  width: 1100px;
+  width: 1200px;
   margin: 0 auto;
   position: relative;
 }
 
 .container {
-  width: 930px;
+  width: 1030px;
   height: 100%;
   position: relative;
   left: 170px;
@@ -40,6 +31,24 @@ body {
   background-color: #ffffff;
   color: #2c3e50;
   font-family: "Montserrat", sans-serif;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+hr {
+  height: 1px;
+  width: 100%;
+  background: #c5d3e2;
+  border: none;
+  margin: 5px 0;
 }
 
 nav {
@@ -170,8 +179,8 @@ main {
   background: linear-gradient(90deg, rgba(236, 240, 241, 0.1) 0%, #ecf0f1 70%, #ecf0f1 100%);
   color: #010f2c;
   border-right: 4px solid #f39c12;
-  -webkit-transition: display 400ms ease-in;
-  transition: display 400ms ease-in;
+  -webkit-transition: display 400ms ease;
+  transition: display 400ms ease;
 }
 
 .sidebar ul li a svg.feather {
@@ -201,8 +210,8 @@ input[type="submit"].button {
   text-align: center;
   display: inline-block;
   font-size: 15px !important;
-  -webkit-transition: all 500ms;
-  transition: all 500ms;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
 }
 
 .button:hover,
@@ -211,8 +220,8 @@ button.button:hover,
 input[type="button"].button:hover,
 input[type="submit"].button:hover {
   cursor: pointer;
-  -webkit-transition: all 500ms ease-in;
-  transition: all 500ms ease-in;
+  -webkit-transition: all 200ms ease ease;
+  transition: all 200ms ease ease;
 }
 
 .button.small,
@@ -245,6 +254,7 @@ input[type="submit"].button.green,
 input[type="submit"].button.success {
   background-color: #27ae60 !important;
   border: 1px solid #27ae60 !important;
+  color: #ecf0f1 !important;
 }
 
 .button.green:hover, .button.success:hover,
@@ -258,6 +268,33 @@ input[type="submit"].button.green:hover,
 input[type="submit"].button.success:hover {
   background-color: #2ecc71 !important;
   border: 1px solid #2ecc71 !important;
+}
+
+.button.green.gradient, .button.success.gradient,
+a.button.green.gradient,
+a.button.success.gradient,
+button.button.green.gradient,
+button.button.success.gradient,
+input[type="button"].button.green.gradient,
+input[type="button"].button.success.gradient,
+input[type="submit"].button.green.gradient,
+input[type="submit"].button.success.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#ddf7e8), color-stop(3%, #60db94), color-stop(9%, #27ae60), to(#27ae60)) !important;
+  background: linear-gradient(180deg, #ddf7e8 0%, #60db94 3%, #27ae60 9%, #27ae60 100%) !important;
+}
+
+.button.green.gradient:hover, .button.success.gradient:hover,
+a.button.green.gradient:hover,
+a.button.success.gradient:hover,
+button.button.green.gradient:hover,
+button.button.success.gradient:hover,
+input[type="button"].button.green.gradient:hover,
+input[type="button"].button.success.gradient:hover,
+input[type="submit"].button.green.gradient:hover,
+input[type="submit"].button.success.gradient:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #89e5b0), color-stop(9%, #2cc36b), to(#2cc36b)) !important;
+  background: linear-gradient(180deg, white 0%, #89e5b0 3%, #2cc36b 9%, #2cc36b 100%) !important;
+  border: 1px solid #2cc36b !important;
 }
 
 .button.green.outline, .button.success.outline,
@@ -285,33 +322,7 @@ input[type="submit"].button.green.outline:hover,
 input[type="submit"].button.success.outline:hover {
   background-color: #36d278 !important;
   border: 1px solid #36d278 !important;
-  color: #ffffff !important;
-}
-
-.button.green.gradient, .button.success.gradient,
-a.button.green.gradient,
-a.button.success.gradient,
-button.button.green.gradient,
-button.button.success.gradient,
-input[type="button"].button.green.gradient,
-input[type="button"].button.success.gradient,
-input[type="submit"].button.green.gradient,
-input[type="submit"].button.success.gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ddf7e8), color-stop(3%, #60db94), color-stop(9%, #27ae60), to(#27ae60)) !important;
-  background: linear-gradient(180deg, #ddf7e8 0%, #60db94 3%, #27ae60 9%, #27ae60 100%) !important;
-}
-
-.button.green.gradient:hover, .button.success.gradient:hover,
-a.button.green.gradient:hover,
-a.button.success.gradient:hover,
-button.button.green.gradient:hover,
-button.button.success.gradient:hover,
-input[type="button"].button.green.gradient:hover,
-input[type="button"].button.success.gradient:hover,
-input[type="submit"].button.green.gradient:hover,
-input[type="submit"].button.success.gradient:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #89e5b0), color-stop(9%, #2cc36b), to(#2cc36b)) !important;
-  background: linear-gradient(180deg, white 0%, #89e5b0 3%, #2cc36b 9%, #2cc36b 100%) !important;
+  color: #ecf0f1 !important;
 }
 
 .button.primary, .button.blue,
@@ -325,6 +336,7 @@ input[type="submit"].button.primary,
 input[type="submit"].button.blue {
   background-color: #2980b9 !important;
   border: 1px solid #2980b9 !important;
+  color: #ecf0f1 !important;
 }
 
 .button.primary:hover, .button.blue:hover,
@@ -338,6 +350,33 @@ input[type="submit"].button.primary:hover,
 input[type="submit"].button.blue:hover {
   background-color: #3498db !important;
   border: 1px solid #3498db !important;
+}
+
+.button.primary.gradient, .button.blue.gradient,
+a.button.primary.gradient,
+a.button.blue.gradient,
+button.button.primary.gradient,
+button.button.blue.gradient,
+input[type="button"].button.primary.gradient,
+input[type="button"].button.blue.gradient,
+input[type="submit"].button.primary.gradient,
+input[type="submit"].button.blue.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#e7f2fa), color-stop(3%, #6ab0de), color-stop(9%, #2980b9), to(#2980b9)) !important;
+  background: linear-gradient(180deg, #e7f2fa 0%, #6ab0de 3%, #2980b9 9%, #2980b9 100%) !important;
+}
+
+.button.primary.gradient:hover, .button.blue.gradient:hover,
+a.button.primary.gradient:hover,
+a.button.blue.gradient:hover,
+button.button.primary.gradient:hover,
+button.button.blue.gradient:hover,
+input[type="button"].button.primary.gradient:hover,
+input[type="button"].button.blue.gradient:hover,
+input[type="submit"].button.primary.gradient:hover,
+input[type="submit"].button.blue.gradient:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #94c6e7), color-stop(9%, #2e8ece), to(#2e8ece)) !important;
+  background: linear-gradient(180deg, white 0%, #94c6e7 3%, #2e8ece 9%, #2e8ece 100%) !important;
+  border: 1px solid #2e8ece !important;
 }
 
 .button.primary.outline, .button.blue.outline,
@@ -365,33 +404,7 @@ input[type="submit"].button.primary.outline:hover,
 input[type="submit"].button.blue.outline:hover {
   background-color: #409ad5 !important;
   border: 1px solid #409ad5 !important;
-  color: #ffffff !important;
-}
-
-.button.primary.gradient, .button.blue.gradient,
-a.button.primary.gradient,
-a.button.blue.gradient,
-button.button.primary.gradient,
-button.button.blue.gradient,
-input[type="button"].button.primary.gradient,
-input[type="button"].button.blue.gradient,
-input[type="submit"].button.primary.gradient,
-input[type="submit"].button.blue.gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e7f2fa), color-stop(3%, #6ab0de), color-stop(9%, #2980b9), to(#2980b9)) !important;
-  background: linear-gradient(180deg, #e7f2fa 0%, #6ab0de 3%, #2980b9 9%, #2980b9 100%) !important;
-}
-
-.button.primary.gradient:hover, .button.blue.gradient:hover,
-a.button.primary.gradient:hover,
-a.button.blue.gradient:hover,
-button.button.primary.gradient:hover,
-button.button.blue.gradient:hover,
-input[type="button"].button.primary.gradient:hover,
-input[type="button"].button.blue.gradient:hover,
-input[type="submit"].button.primary.gradient:hover,
-input[type="submit"].button.blue.gradient:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #94c6e7), color-stop(9%, #2e8ece), to(#2e8ece)) !important;
-  background: linear-gradient(180deg, white 0%, #94c6e7 3%, #2e8ece 9%, #2e8ece 100%) !important;
+  color: #ecf0f1 !important;
 }
 
 .button.danger, .button.red,
@@ -405,6 +418,7 @@ input[type="submit"].button.danger,
 input[type="submit"].button.red {
   background-color: #c0392b !important;
   border: 1px solid #c0392b !important;
+  color: #ecf0f1 !important;
 }
 
 .button.danger:hover, .button.red:hover,
@@ -417,6 +431,33 @@ input[type="button"].button.red:hover,
 input[type="submit"].button.danger:hover,
 input[type="submit"].button.red:hover {
   background-color: #d14233 !important;
+  border: 1px solid #d14233 !important;
+}
+
+.button.danger.gradient, .button.red.gradient,
+a.button.danger.gradient,
+a.button.red.gradient,
+button.button.danger.gradient,
+button.button.red.gradient,
+input[type="button"].button.danger.gradient,
+input[type="button"].button.red.gradient,
+input[type="submit"].button.danger.gradient,
+input[type="submit"].button.red.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#fbf0ef), color-stop(3%, #df7c72), color-stop(9%, #c0392b), to(#c0392b)) !important;
+  background: linear-gradient(180deg, #fbf0ef 0%, #df7c72 3%, #c0392b 9%, #c0392b 100%) !important;
+}
+
+.button.danger.gradient:hover, .button.red.gradient:hover,
+a.button.danger.gradient:hover,
+a.button.red.gradient:hover,
+button.button.danger.gradient:hover,
+button.button.red.gradient:hover,
+input[type="button"].button.danger.gradient:hover,
+input[type="button"].button.red.gradient:hover,
+input[type="submit"].button.danger.gradient:hover,
+input[type="submit"].button.red.gradient:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #e9a39b), color-stop(9%, #d14233), to(#d14233)) !important;
+  background: linear-gradient(180deg, white 0%, #e9a39b 3%, #d14233 9%, #d14233 100%) !important;
   border: 1px solid #d14233 !important;
 }
 
@@ -445,33 +486,7 @@ input[type="submit"].button.danger.outline:hover,
 input[type="submit"].button.red.outline:hover {
   background-color: #d65548 !important;
   border: 1px solid #d65548 !important;
-  color: #ffffff !important;
-}
-
-.button.danger.gradient, .button.red.gradient,
-a.button.danger.gradient,
-a.button.red.gradient,
-button.button.danger.gradient,
-button.button.red.gradient,
-input[type="button"].button.danger.gradient,
-input[type="button"].button.red.gradient,
-input[type="submit"].button.danger.gradient,
-input[type="submit"].button.red.gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(#fbf0ef), color-stop(3%, #df7c72), color-stop(9%, #c0392b), to(#c0392b)) !important;
-  background: linear-gradient(180deg, #fbf0ef 0%, #df7c72 3%, #c0392b 9%, #c0392b 100%) !important;
-}
-
-.button.danger.gradient:hover, .button.red.gradient:hover,
-a.button.danger.gradient:hover,
-a.button.red.gradient:hover,
-button.button.danger.gradient:hover,
-button.button.red.gradient:hover,
-input[type="button"].button.danger.gradient:hover,
-input[type="button"].button.red.gradient:hover,
-input[type="submit"].button.danger.gradient:hover,
-input[type="submit"].button.red.gradient:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #e9a39b), color-stop(9%, #d14233), to(#d14233)) !important;
-  background: linear-gradient(180deg, white 0%, #e9a39b 3%, #d14233 9%, #d14233 100%) !important;
+  color: #ecf0f1 !important;
 }
 
 .button.secondary, .button.yellow,
@@ -485,6 +500,7 @@ input[type="submit"].button.secondary,
 input[type="submit"].button.yellow {
   background-color: #f39c12 !important;
   border: 1px solid #f39c12 !important;
+  color: #ecf0f1 !important;
 }
 
 .button.secondary:hover, .button.yellow:hover,
@@ -498,6 +514,33 @@ input[type="submit"].button.secondary:hover,
 input[type="submit"].button.yellow:hover {
   background-color: #f5ab35 !important;
   border: 1px solid #f5ab35 !important;
+}
+
+.button.secondary.gradient, .button.yellow.gradient,
+a.button.secondary.gradient,
+a.button.yellow.gradient,
+button.button.secondary.gradient,
+button.button.yellow.gradient,
+input[type="button"].button.secondary.gradient,
+input[type="button"].button.yellow.gradient,
+input[type="submit"].button.secondary.gradient,
+input[type="submit"].button.yellow.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #f8c573), color-stop(9%, #f39c12), to(#f39c12)) !important;
+  background: linear-gradient(180deg, white 0%, #f8c573 3%, #f39c12 9%, #f39c12 100%) !important;
+}
+
+.button.secondary.gradient:hover, .button.yellow.gradient:hover,
+a.button.secondary.gradient:hover,
+a.button.yellow.gradient:hover,
+button.button.secondary.gradient:hover,
+button.button.yellow.gradient:hover,
+input[type="button"].button.secondary.gradient:hover,
+input[type="button"].button.yellow.gradient:hover,
+input[type="submit"].button.secondary.gradient:hover,
+input[type="submit"].button.yellow.gradient:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #fad9a4), color-stop(9%, #f4a62a), to(#f4a62a)) !important;
+  background: linear-gradient(180deg, white 0%, #fad9a4 3%, #f4a62a 9%, #f4a62a 100%) !important;
+  border: 1px solid #f4a62a !important;
 }
 
 .button.secondary.outline, .button.yellow.outline,
@@ -525,33 +568,7 @@ input[type="submit"].button.secondary.outline:hover,
 input[type="submit"].button.yellow.outline:hover {
   background-color: #f5b043 !important;
   border: 1px solid #f5b043 !important;
-  color: #ffffff !important;
-}
-
-.button.secondary.gradient, .button.yellow.gradient,
-a.button.secondary.gradient,
-a.button.yellow.gradient,
-button.button.secondary.gradient,
-button.button.yellow.gradient,
-input[type="button"].button.secondary.gradient,
-input[type="button"].button.yellow.gradient,
-input[type="submit"].button.secondary.gradient,
-input[type="submit"].button.yellow.gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #f8c573), color-stop(9%, #f39c12), to(#f39c12)) !important;
-  background: linear-gradient(180deg, white 0%, #f8c573 3%, #f39c12 9%, #f39c12 100%) !important;
-}
-
-.button.secondary.gradient:hover, .button.yellow.gradient:hover,
-a.button.secondary.gradient:hover,
-a.button.yellow.gradient:hover,
-button.button.secondary.gradient:hover,
-button.button.yellow.gradient:hover,
-input[type="button"].button.secondary.gradient:hover,
-input[type="button"].button.yellow.gradient:hover,
-input[type="submit"].button.secondary.gradient:hover,
-input[type="submit"].button.yellow.gradient:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #fad9a4), color-stop(9%, #f4a62a), to(#f4a62a)) !important;
-  background: linear-gradient(180deg, white 0%, #fad9a4 3%, #f4a62a 9%, #f4a62a 100%) !important;
+  color: #ecf0f1 !important;
 }
 
 .button.muted, .button.gray,
@@ -565,6 +582,7 @@ input[type="submit"].button.muted,
 input[type="submit"].button.gray {
   background-color: #bdc3c7 !important;
   border: 1px solid #bdc3c7 !important;
+  color: #2c3e50 !important;
 }
 
 .button.muted:hover, .button.gray:hover,
@@ -578,6 +596,33 @@ input[type="submit"].button.muted:hover,
 input[type="submit"].button.gray:hover {
   background-color: #c5d3e2 !important;
   border: 1px solid #c5d3e2 !important;
+}
+
+.button.muted.gradient, .button.gray.gradient,
+a.button.muted.gradient,
+a.button.gray.gradient,
+button.button.muted.gradient,
+button.button.gray.gradient,
+input[type="button"].button.muted.gradient,
+input[type="button"].button.gray.gradient,
+input[type="submit"].button.muted.gradient,
+input[type="submit"].button.gray.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #f4f5f6), color-stop(9%, #bdc3c7), to(#bdc3c7)) !important;
+  background: linear-gradient(180deg, white 0%, #f4f5f6 3%, #bdc3c7 9%, #bdc3c7 100%) !important;
+}
+
+.button.muted.gradient:hover, .button.gray.gradient:hover,
+a.button.muted.gradient:hover,
+a.button.gray.gradient:hover,
+button.button.muted.gradient:hover,
+button.button.gray.gradient:hover,
+input[type="button"].button.muted.gradient:hover,
+input[type="button"].button.gray.gradient:hover,
+input[type="submit"].button.muted.gradient:hover,
+input[type="submit"].button.gray.gradient:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, white), color-stop(9%, #cbd0d3), to(#cbd0d3)) !important;
+  background: linear-gradient(180deg, white 0%, white 3%, #cbd0d3 9%, #cbd0d3 100%) !important;
+  border: 1px solid #cbd0d3 !important;
 }
 
 .button.muted.outline, .button.gray.outline,
@@ -605,33 +650,7 @@ input[type="submit"].button.muted.outline:hover,
 input[type="submit"].button.gray.outline:hover {
   background-color: #d9dcde !important;
   border: 1px solid #d9dcde !important;
-  color: #ffffff !important;
-}
-
-.button.muted.gradient, .button.gray.gradient,
-a.button.muted.gradient,
-a.button.gray.gradient,
-button.button.muted.gradient,
-button.button.gray.gradient,
-input[type="button"].button.muted.gradient,
-input[type="button"].button.gray.gradient,
-input[type="submit"].button.muted.gradient,
-input[type="submit"].button.gray.gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #f4f5f6), color-stop(9%, #bdc3c7), to(#bdc3c7)) !important;
-  background: linear-gradient(180deg, white 0%, #f4f5f6 3%, #bdc3c7 9%, #bdc3c7 100%) !important;
-}
-
-.button.muted.gradient:hover, .button.gray.gradient:hover,
-a.button.muted.gradient:hover,
-a.button.gray.gradient:hover,
-button.button.muted.gradient:hover,
-button.button.gray.gradient:hover,
-input[type="button"].button.muted.gradient:hover,
-input[type="button"].button.gray.gradient:hover,
-input[type="submit"].button.muted.gradient:hover,
-input[type="submit"].button.gray.gradient:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, white), color-stop(9%, #cbd0d3), to(#cbd0d3)) !important;
-  background: linear-gradient(180deg, white 0%, white 3%, #cbd0d3 9%, #cbd0d3 100%) !important;
+  color: #2c3e50 !important;
 }
 
 .button.dark,
@@ -641,6 +660,7 @@ input[type="button"].button.dark,
 input[type="submit"].button.dark {
   background-color: #2c3e50 !important;
   border: 1px solid #2c3e50 !important;
+  color: #ecf0f1 !important;
 }
 
 .button.dark:hover,
@@ -650,6 +670,25 @@ input[type="button"].button.dark:hover,
 input[type="submit"].button.dark:hover {
   background-color: #010f2c !important;
   border: 1px solid #010f2c !important;
+}
+
+.button.dark.gradient,
+a.button.dark.gradient,
+button.button.dark.gradient,
+input[type="button"].button.dark.gradient,
+input[type="submit"].button.dark.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(#aabed1), color-stop(3%, #507192), color-stop(9%, #2c3e50), to(#2c3e50)) !important;
+  background: linear-gradient(180deg, #aabed1 0%, #507192 3%, #2c3e50 9%, #2c3e50 100%) !important;
+}
+
+.button.dark.gradient:hover,
+a.button.dark.gradient:hover,
+button.button.dark.gradient:hover,
+input[type="button"].button.dark.gradient:hover,
+input[type="submit"].button.dark.gradient:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(#cbd7e3), color-stop(3%, #698bac), color-stop(9%, #354b60), to(#354b60)) !important;
+  background: linear-gradient(180deg, #cbd7e3 0%, #698bac 3%, #354b60 9%, #354b60 100%) !important;
+  border: 1px solid #354b60 !important;
 }
 
 .button.dark.outline,
@@ -669,25 +708,7 @@ input[type="button"].button.dark.outline:hover,
 input[type="submit"].button.dark.outline:hover {
   background-color: #3e5871 !important;
   border: 1px solid #3e5871 !important;
-  color: #ffffff !important;
-}
-
-.button.dark.gradient,
-a.button.dark.gradient,
-button.button.dark.gradient,
-input[type="button"].button.dark.gradient,
-input[type="submit"].button.dark.gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(#aabed1), color-stop(3%, #507192), color-stop(9%, #2c3e50), to(#2c3e50)) !important;
-  background: linear-gradient(180deg, #aabed1 0%, #507192 3%, #2c3e50 9%, #2c3e50 100%) !important;
-}
-
-.button.dark.gradient:hover,
-a.button.dark.gradient:hover,
-button.button.dark.gradient:hover,
-input[type="button"].button.dark.gradient:hover,
-input[type="submit"].button.dark.gradient:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(#cbd7e3), color-stop(3%, #698bac), color-stop(9%, #354b60), to(#354b60)) !important;
-  background: linear-gradient(180deg, #cbd7e3 0%, #698bac 3%, #354b60 9%, #354b60 100%) !important;
+  color: #ecf0f1 !important;
 }
 
 .button.lightblue,
@@ -697,6 +718,7 @@ input[type="button"].button.lightblue,
 input[type="submit"].button.lightblue {
   background-color: #39d5ff !important;
   border: 1px solid #39d5ff !important;
+  color: #ecf0f1 !important;
 }
 
 .button.lightblue:hover,
@@ -706,6 +728,25 @@ input[type="button"].button.lightblue:hover,
 input[type="submit"].button.lightblue:hover {
   background-color: #06caff !important;
   border: 1px solid #06caff !important;
+}
+
+.button.lightblue.gradient,
+a.button.lightblue.gradient,
+button.button.lightblue.gradient,
+input[type="button"].button.lightblue.gradient,
+input[type="submit"].button.lightblue.gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #9febff), color-stop(9%, #39d5ff), to(#39d5ff)) !important;
+  background: linear-gradient(180deg, white 0%, #9febff 3%, #39d5ff 9%, #39d5ff 100%) !important;
+}
+
+.button.lightblue.gradient:hover,
+a.button.lightblue.gradient:hover,
+button.button.lightblue.gradient:hover,
+input[type="button"].button.lightblue.gradient:hover,
+input[type="submit"].button.lightblue.gradient:hover {
+  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #d2f5ff), color-stop(9%, #53daff), to(#53daff)) !important;
+  background: linear-gradient(180deg, white 0%, #d2f5ff 3%, #53daff 9%, #53daff 100%) !important;
+  border: 1px solid #53daff !important;
 }
 
 .button.lightblue.outline,
@@ -725,23 +766,41 @@ input[type="button"].button.lightblue.outline:hover,
 input[type="submit"].button.lightblue.outline:hover {
   background-color: #6ce0ff !important;
   border: 1px solid #6ce0ff !important;
-  color: #ffffff !important;
+  color: #ecf0f1 !important;
 }
 
-.button.lightblue.gradient,
-a.button.lightblue.gradient,
-button.button.lightblue.gradient,
-input[type="button"].button.lightblue.gradient,
-input[type="submit"].button.lightblue.gradient {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #9febff), color-stop(9%, #39d5ff), to(#39d5ff)) !important;
-  background: linear-gradient(180deg, white 0%, #9febff 3%, #39d5ff 9%, #39d5ff 100%) !important;
+@media (max-width: 480px) {
+  .nav img.logo {
+    display: none;
+  }
 }
 
-.button.lightblue.gradient:hover,
-a.button.lightblue.gradient:hover,
-button.button.lightblue.gradient:hover,
-input[type="button"].button.lightblue.gradient:hover,
-input[type="submit"].button.lightblue.gradient:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(white), color-stop(3%, #d2f5ff), color-stop(9%, #53daff), to(#53daff)) !important;
-  background: linear-gradient(180deg, white 0%, #d2f5ff 3%, #53daff 9%, #53daff 100%) !important;
+@media (min-width: 750px) {
+  .menu-btn {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 1000px !important;
+  }
+}
+
+@media (max-width: 1000px) {
+  .wrapper {
+    width: 80% !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .wrapper {
+    width: 90% !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    width: 100% !important;
+  }
 }
