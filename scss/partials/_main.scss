@@ -13,13 +13,13 @@ main {
     90deg,
     $color_white 0%,
     $color_white 75%,
-    toRgba($color_light, 10) 100%
+    to-rgba($color_light, 10) 100%
   );
   border-right: 1px solid $color_gray;
   position: absolute;
   left: 0;
   z-index: 1;
-  transition: all 700ms ease;
+  transition: all $long_trans;
 
   ul {
     list-style: none;
@@ -49,13 +49,13 @@ main {
         &:hover {
           background: linear-gradient(
             90deg,
-            toRgba($color_light, 10) 0%,
-            toRgba($color_light, 100) 70%,
-            toRgba($color_light, 100) 100%
+            to-rgba($color_light, 10) 0%,
+            to-rgba($color_light, 100) 70%,
+            to-rgba($color_light, 100) 100%
           );
           color: $color_black;
           border-right: 4px solid $color_yellow;
-          transition: display 400ms ease-in;
+          transition: display $mid_trans;
         }
 
         svg.feather {
@@ -71,6 +71,6 @@ main {
     left: -70px !important;
     opacity: 0;
     visibility: hidden;
-    transition: all 700ms ease;
+    transition: all $long_trans;
   }
 }
