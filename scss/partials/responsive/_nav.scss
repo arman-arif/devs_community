@@ -1,0 +1,13 @@
+@include response(mobile) {
+  .nav {
+    img.logo {
+      display: none;
+    }
+  }
+}
+
+@include no-response(tablet) {
+  .menu-btn {
+    display: none !important;
+  }
+}
