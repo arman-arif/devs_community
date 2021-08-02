@@ -1,0 +1,18 @@
+$breakpoints: (
+  desktop: $desktop_width,
+  laptop: $laptop_width,
+  tablet: $tablet_width,
+  mobile: $mobile_width,
+);
+
+@mixin response($breakpoint) {
+  @media (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
+
+@mixin no-response($breakpoint) {
+  @media (min-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}
