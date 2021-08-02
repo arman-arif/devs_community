@@ -11,11 +11,11 @@ input[type="submit"].button {
   text-align: center;
   display: inline-block;
   font-size: 15px !important;
-  transition: all 500ms;
+  transition: all $short_trans;
 
   &:hover {
     cursor: pointer;
-    transition: all 500ms ease-in;
+    transition: all $short_trans ease;
   }
 
   &.small {
