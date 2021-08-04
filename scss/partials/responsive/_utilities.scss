@@ -1,5 +1,5 @@
 @each $breakpoint, $width in $wrapper_width_list {
-  @include response($breakpoint) {
+  @include response-max($breakpoint) {
     .wrapper {
       // width: map-get($wrapper_width_list, mobile) !important;
       width: $width !important;

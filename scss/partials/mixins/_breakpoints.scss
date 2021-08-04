@@ -5,13 +5,13 @@ $breakpoints: (
   mobile: $mobile_width,
 );
 
-@mixin response($breakpoint) {
+@mixin response-max($breakpoint) {
   @media (max-width: map-get($breakpoints, $breakpoint)) {
     @content;
   }
 }
 
-@mixin no-response($breakpoint) {
+@mixin response-min($breakpoint) {
   @media (min-width: map-get($breakpoints, $breakpoint)) {
     @content;
   }

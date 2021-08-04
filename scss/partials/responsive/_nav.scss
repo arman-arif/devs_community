@@ -1,12 +1,15 @@
-@include response(mobile) {
+@include response-max(mobile) {
   .nav {
     img.logo {
-      display: none;
+      display: none !important;
+    }
+    img.logo-mobile{
+      display: block !important;
     }
   }
 }
 
-@include no-response(tablet) {
+@include response-min(tablet) {
   .menu-btn {
     display: none !important;
   }
