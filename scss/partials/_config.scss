@@ -20,6 +20,17 @@ $wrapper_width_list: (
   mobile: 100%,
 );
 
+//color list
+$colors: (
+  blue: $color_blue,
+  lightblue: $color_lightblue,
+  green: $color_green,
+  yellow: $color_yellow,
+  red: $color_red,
+  gray: $color_gray,
+  dark: $color_dark,
+);
+
 //HEX to RGBA
 @function to-rgba($color, $opacity: 100) {
   @return rgba(
