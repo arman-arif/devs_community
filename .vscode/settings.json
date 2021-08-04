@@ -1,19 +1,21 @@
 {
-    "liveSassCompile.settings.generateMap": false,
-    "liveSassCompile.settings.showOutputWindow": false,
-    "liveSassCompile.settings.formats": [
-        {
-            "format": "expanded",
-            "extensionName": ".css",
-            "savePath": "/css"
-        },
-        {
-            "format": "compressed",
-            "extensionName": ".min.css",
-            "savePath": "/css"
-        }
-    ],
-    "editor.formatOnSave": true,
-    "editor.tabSize": 2,
-
+  "liveSassCompile.settings.generateMap": false,
+  "liveSassCompile.settings.showOutputWindow": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/css"
+    }
+  ],
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "liveSassCompile.settings.forceBaseDirectory": "/scss",
+  "liveSassCompile.settings.showOutputWindowOn": "Error",
+  "livePreview.defaultPreviewPath": "/index.html"
 }
