@@ -1,19 +1,16 @@
-@include response-max(tablet) {
+@include response-max(mobile) {
   .nav {
     img.logo {
       display: none !important;
     }
-    img.logo-mobile {
-      display: inline-flex !important;
+    img.logo-mobile{
+      display: block !important;
     }
   }
 }
 
 @include response-min(tablet) {
   .menu-btn {
-    display: none !important;
-  }
-  img.logo-mobile {
     display: none !important;
   }
 }
