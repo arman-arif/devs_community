@@ -1,8 +1,14 @@
 // Sizes
-$wrapper_width: 1200px;
+$wrapper_width: 1100px;
 $nav_height: 50px;
 $container_padding: 30px;
 $sidebar_width: 170px;
+
+// Screen sizes
+$desktop_width: 1200px;
+$laptop_width: 1050px;
+$tablet_width: 750px;
+$mobile_width: 480px;
 
 // Times
 $short_trans: 200ms ease;
@@ -15,9 +21,9 @@ $default_font: "Montserrat", sans-serif;
 //Responsive sizes
 $wrapper_width_list: (
   desktop: 1000px,
-  laptop: 80%,
-  tablet: 90%,
-  mobile: 100%,
+  laptop: 80vw,
+  tablet: 95vw,
+  mobile: 100vw,
 );
 
 //color list
