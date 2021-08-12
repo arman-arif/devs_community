@@ -1,4 +1,9 @@
-@mixin button($bgcolor, $bgcolor2: lighten($bgcolor,5)) {
+@mixin button(
+  $bgcolor,
+  $bgcolor2: lighten($bgcolor, 5),
+  $outline: true,
+  $gradient: true
+) {
   background-color: $bgcolor !important;
   border: 1px solid $bgcolor !important;
   color: set-text-color($bgcolor) !important;
@@ -8,8 +13,12 @@
     border: 1px solid $bgcolor2 !important;
   }
 
-  @include button-gradient($bgcolor);
-  @include button-outline($bgcolor);
+  @if $gradient {
+    @include button-gradient($bgcolor);
+  }
+  @if $outline {
+    @include button-outline($bgcolor);
+  }
 }
 
 @mixin button-outline($color) {
