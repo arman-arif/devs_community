@@ -1104,19 +1104,19 @@ input[type="submit"].button.electron:hover {
 
 @media (max-width: 1200px) {
   .wrapper {
-    width: 1000px !important;
+    width: 1050px !important;
   }
 }
 
 @media (max-width: 1050px) {
   .wrapper {
-    width: 80vw !important;
+    width: 97vw !important;
   }
 }
 
 @media (max-width: 750px) {
   .wrapper {
-    width: 95vw !important;
+    width: 98vw !important;
   }
 }
 
@@ -1128,19 +1128,19 @@ input[type="submit"].button.electron:hover {
 
 @media (max-width: 1200px) {
   .container {
-    width: calc(1000px - 170px) !important;
+    width: calc(1050px - 170px) !important;
   }
 }
 
 @media (max-width: 1050px) {
   .container {
-    width: calc(80vw - 170px) !important;
+    width: calc(97vw - 170px) !important;
   }
 }
 
 @media (max-width: 750px) {
   .container {
-    width: calc(95vw - 170px) !important;
+    width: calc(98vw - 170px) !important;
   }
 }
 
