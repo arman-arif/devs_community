@@ -35,24 +35,15 @@ input[type="submit"].button {
       @include button($color);
     }
   }
-  
-  &.success {
-    @include button($color_green, $color_green2);
+
+  @each $name, $color in $color-schemes {
+    &.#{$name} {
+      @include button($color);
+    }
   }
 
-  &.primary {
-    @include button($color_primary, $color_primary2);
-  }
-
-  &.danger {
-    @include button($color_red, lighten($color_red, 5));
-  }
-
-  &.secondary {
-    @include button($color_secondary);
-  }
-
-  &.muted {
-    @include button($color_gray, $color_gray2);
+  &.electron {
+    @include button($color_btn_blue, $outline: false, $gradient: false);
+    box-shadow: inset 0 1px 0 0 to-rgba(#ffffff, 40) !important;
   }
 }
