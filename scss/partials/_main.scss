@@ -67,10 +67,12 @@ main {
     }
   }
 
-  &.hide {
-    left: -70px !important;
-    opacity: 0;
-    visibility: hidden;
-    transition: all $long_trans;
+  @include response-max(tablet) {
+    &.hide {
+      left: -70px !important;
+      opacity: 0;
+      visibility: hidden;
+      transition: all $long_trans;
+    }
   }
 }
