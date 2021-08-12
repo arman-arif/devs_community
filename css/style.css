@@ -6,13 +6,13 @@ input[type="submit"] {
 }
 
 .wrapper {
-  width: 1200px;
+  width: 1100px;
   margin: 0 auto;
   position: relative;
 }
 
 .container {
-  width: 1030px;
+  width: 930px;
   height: 100%;
   position: relative;
   left: 170px;
@@ -141,7 +141,7 @@ main {
 }
 
 .sidebar {
-  background: #ffffff;
+  background: #ffffff !important;
   padding: 30px 0;
   width: 170px;
   height: 100vh;
@@ -149,11 +149,8 @@ main {
   background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(75%, #ffffff), to(rgba(236, 240, 241, 0.1)));
   background: linear-gradient(90deg, #ffffff 0%, #ffffff 75%, rgba(236, 240, 241, 0.1) 100%);
   border-right: 1px solid #bdc3c7;
-  position: absolute;
-  left: 0;
+  position: fixed;
   z-index: 1;
-  -webkit-transition: all 700ms ease;
-  transition: all 700ms ease;
 }
 
 .sidebar ul {
@@ -202,14 +199,6 @@ main {
   width: 20px !important;
   height: 20px !important;
   padding-right: 5px;
-}
-
-.sidebar.hide {
-  left: -70px !important;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: all 700ms ease;
-  transition: all 700ms ease;
 }
 
 .button,
@@ -1119,20 +1108,63 @@ input[type="submit"].button.electron:hover {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
   .wrapper {
-    width: 80% !important;
+    width: 80vw !important;
   }
 }
 
 @media (max-width: 750px) {
   .wrapper {
-    width: 90% !important;
+    width: 95vw !important;
   }
 }
 
 @media (max-width: 480px) {
   .wrapper {
+    width: 100vw !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: calc(1000px - 170px) !important;
+  }
+}
+
+@media (max-width: 1050px) {
+  .container {
+    width: calc(80vw - 170px) !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .container {
+    width: calc(95vw - 170px) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: calc(100vw - 170px) !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .sidebar {
+    left: 0;
+    -webkit-transition: all 700ms ease;
+    transition: all 700ms ease;
+  }
+  .sidebar.hide {
+    left: -70px !important;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 200ms ease;
+    transition: all 200ms ease;
+  }
+  .wrapper .container {
+    left: 0;
     width: 100% !important;
   }
 }
