@@ -4,9 +4,9 @@ main {
 }
 
 .sidebar {
-  background: $color_white;
+  background: $color_white !important;
   padding: $container_padding 0;
-  width: 170px;
+  width: $sidebar_width;
   height: 100vh;
   background: $color_white;
   background: linear-gradient(
@@ -16,10 +16,8 @@ main {
     to-rgba($color_light, 10) 100%
   );
   border-right: 1px solid $color_gray;
-  position: absolute;
-  left: 0;
+  position: fixed;
   z-index: 1;
-  transition: all $long_trans;
 
   ul {
     list-style: none;
@@ -64,15 +62,6 @@ main {
           padding-right: 5px;
         }
       }
-    }
-  }
-
-  @include response-max(tablet) {
-    &.hide {
-      left: -70px !important;
-      opacity: 0;
-      visibility: hidden;
-      transition: all $long_trans;
     }
   }
 }

@@ -1,0 +1,33 @@
+@each $breakpoint, $width in $wrapper_width_list {
+  @include response-max($breakpoint) {
+    .container {
+      width: calc(#{$width} - #{$sidebar_width}) !important;
+    }
+  }
+}
+
+@include response-max(tablet) {
+  .sidebar {
+    left: 0;
+    transition: all $long_trans;
+
+    &.hide {
+      left: -70px !important;
+      opacity: 0;
+      visibility: hidden;
+      transition: all $short_trans;
+    }
+  }
+  .wrapper {
+    .container {
+      left: 0;
+      width: 100% !important;
+    }
+  }
+}
+
+// @include response-min(laptop) {
+//   .sidebar {
+//     right: calc(100vw - (100vw - $wrapper_width) - $sidebar_width);
+//   }
+// }
