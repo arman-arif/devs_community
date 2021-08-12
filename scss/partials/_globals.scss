@@ -29,3 +29,7 @@ hr {
   border: none;
   margin: 5px 0;
 }
+
+@include all-heading {
+  font-weight: 500;
+}
