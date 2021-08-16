@@ -63,8 +63,8 @@ input[type="submit"] {
 .button,
 a.button,
 button.button,
-input[type="button"].button,
-input[type="submit"].button {
+input.button[type="button"],
+input.button[type="submit"] {
   margin: 5px 0;
   padding: 8px 20px;
   border-radius: 4px !important;
@@ -939,6 +939,48 @@ input[type="button"].button.electron:hover,
 input[type="submit"].button.electron:hover {
   background-color: #1aa0ff !important;
   border: 1px solid #1aa0ff !important;
+}
+
+.button-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.button-group.group-right {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.button-group.outline a,
+.button-group.outline button {
+  margin: 0;
+  display: inline-block;
+  text-decoration: none !important;
+  padding: 9px 12px !important;
+  border: 1px solid #2c3e50 !important;
+  border-right: none !important;
+  color: #2c3e50;
+}
+
+.button-group.outline a:hover,
+.button-group.outline button:hover {
+  background: #2c3e50 !important;
+  color: #ecf0f1;
+}
+
+.button-group.outline a:last-child,
+.button-group.outline button:last-child {
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+  border-right: 1px solid #2c3e50 !important;
+}
+
+.button-group.outline a:first-child,
+.button-group.outline button:first-child {
+  border-top-left-radius: 5px !important;
+  border-bottom-left-radius: 5px !important;
 }
 
 nav {
