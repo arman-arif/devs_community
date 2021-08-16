@@ -21,16 +21,18 @@
   }
 }
 
-@mixin button-outline($color) {
+@mixin button-outline($color, $hovered: true) {
   &.outline {
     background-color: transparent !important;
     color: $color !important;
     border: 1px solid $color !important;
 
-    &:hover {
-      background-color: lighten($color, 10) !important;
-      border: 1px solid lighten($color, 10) !important;
-      color: set-text-color($color) !important;
+    @if $hovered {
+      &:hover {
+        background-color: lighten($color, 10) !important;
+        border: 1px solid lighten($color, 10) !important;
+        color: set-text-color($color) !important;
+      }
     }
   }
 }
