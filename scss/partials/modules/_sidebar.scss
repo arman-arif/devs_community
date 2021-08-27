@@ -1,0 +1,62 @@
+.sidebar {
+  background: $color_white !important;
+  padding: $container_padding 0;
+  width: $sidebar_width;
+  height: 100vh;
+  background: $color_white;
+  background: linear-gradient(
+    90deg,
+    $color_white 0%,
+    $color_white 75%,
+    to-rgba($color_light, 10) 100%
+  );
+  border-right: 1px solid $color_gray;
+  position: fixed;
+  z-index: 1;
+
+  ul {
+    list-style: none;
+
+    li {
+      padding: 5px 0;
+
+      &.active a,
+      &.active a:hover {
+        background: $color_light;
+        color: $color_black;
+        width: 100%;
+        border-right: 4px solid $color_green;
+        font-weight: 600;
+      }
+
+      a {
+        text-decoration: none;
+        font-weight: 500;
+        color: $text_gray;
+        font-size: 15px;
+        display: flex;
+        align-items: center;
+        padding: 6px 10px;
+        transition: none;
+
+        &:hover {
+          background: linear-gradient(
+            90deg,
+            to-rgba($color_light, 10) 0%,
+            to-rgba($color_light, 100) 70%,
+            to-rgba($color_light, 100) 100%
+          );
+          color: $color_black;
+          border-right: 4px solid $color_yellow;
+          transition: display $mid_trans;
+        }
+
+        svg.feather {
+          width: 20px !important;
+          height: 20px !important;
+          padding-right: 5px;
+        }
+      }
+    }
+  }
+}
