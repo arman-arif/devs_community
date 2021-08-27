@@ -1,0 +1,40 @@
+.hot-interest {
+  font-size: 14px !important;
+  margin-bottom: 20px;
+}
+
+.filter-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.filter-block {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  svg {
+    width: 18px;
+    position: absolute;
+    top: 7px;
+    left: 13px;
+    color: $text_gray;
+  }
+}
+
+.filter-search {
+  display: inline-block;
+  margin-bottom: 20px;
+  border: 1px solid $color_gray;
+  border-radius: 4px;
+  padding: 9px 10px 9px 35px !important;
+  color: $text_dark;
+  font-size: 14px !important;
+
+  &:focus {
+    border-color: $color_dark;
+    & + svg {
+      color: $text_dark;
+    }
+  }
+}
