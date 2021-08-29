@@ -1,0 +1,56 @@
+.tags-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+  // grid-gap: 15px; //depricated
+
+  .tag-card {
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid $color_gray;
+
+    .tag-name,
+    a.tag-name {
+      @extend %tag-style;
+    }
+
+    .tag-desc {
+      margin-top: 10px;
+      font-size: 12px !important;
+      line-height: 18px;
+    }
+
+    .question-count {
+      font-size: 10px !important;
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      color: $text_gray2;
+
+      .total {
+        text-align: left;
+        margin-right: 2px;
+      }
+
+      .today {
+        text-align: right;
+        margin-left: 2px;
+      }
+    }
+  }
+
+  @include response-max(laptop) {
+    grid-template-columns: 1fr 1fr 1fr;
+    .question-count {
+      font-size: 10px !important;
+    }
+  }
+
+  @include response-max(tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include response-max(mobile) {
+    grid-template-columns: 1fr;
+  }
+}
