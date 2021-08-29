@@ -43,7 +43,7 @@
     <main class="wrapper">
       <div class="sidebar hide">
         <ul>
-          <li class="active">
+          <li>
             <a href="index.html"> <i data-feather="home"></i> Home </a>
           </li>
           <li>
@@ -51,7 +51,7 @@
               <i data-feather="help-circle"></i> Questions
             </a>
           </li>
-          <li>
+          <li class="active">
             <a href="tags.html"> <i data-feather="tag"></i> Tags </a>
           </li>
           <li>
@@ -62,135 +62,70 @@
 
       <div class="container">
         <div class="title-bar">
-          <h1 class="main-title">Top Questions</h1>
-          <a href="#" class="button ask">Ask Question</a>
+          <h1 class="main-title">Tags</h1>
         </div>
-        <div class="hot-interest button-group outline group-right">
-          <a href="#">Interesting</a>
-          <a href="#">Bountied</a>
-          <a href="#">Hot</a>
-          <a href="#">Week</a>
-          <a href="#">Month</a>
+        <div class="filter-wrap">
+          <div class="filter-block">
+            <input
+              type="search"
+              class="filter-search"
+              placeholder="Filter by tag name"
+            />
+            <i data-feather="search"></i>
+          </div>
+          <div class="hot-interest button-group outline group-right">
+            <a href="#">Populer</a>
+            <a href="#">Name</a>
+            <a href="#">New</a>
+          </div>
         </div>
 
-        <div class="question-list">
-          <div class="question-asked new">
-            <div class="question-left">
-              <div class="counter votes">
-                <div class="count">9</div>
-                <div class="label">votes</div>
-              </div>
-              <div class="counter answers">
-                <div class="count">4</div>
-                <div class="label">answers</div>
-              </div>
-              <div class="counter views">
-                <div class="count">17</div>
-                <div class="label">views</div>
-              </div>
-            </div>
-
-            <div class="question-right">
-              <h3 class="question-title">
-                <a href="#">Open an existing app from a main one in React?</a>
-              </h3>
-              <div class="question-bottom">
-                <div class="question-tags">
-                  <a href="#" class="q-tag">html</a>
-                  <a href="#" class="q-tag">css</a>
-                  <a href="#" class="q-tag">javascript</a>
-                  <a href="#" class="q-tag">reactjs</a>
-                </div>
-                <div class="question-asked-by">
-                  <div class="asked-by-block">
-                    <div class="last-updated-on">asked 10 minutes ago</div>
-                    <div class="asked-by">
-                      by <a href="#" class="user-name">Arman</a>
-                      <strong class="reputation-score">77</strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div class="tags-list">
+          <div class="tag-card">
+            <a href="#html" class="tag-name"> html </a>
+            <p class="tag-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              aspernatur ea iste minus, porro sit...
+            </p>
+            <div class="question-count">
+              <span class="total">23647 questions</span>
+              <span class="today">145 asked today</span>
             </div>
           </div>
 
-          <div class="question-asked">
-            <div class="question-left">
-              <div class="counter votes">
-                <div class="count">9</div>
-                <div class="label">votes</div>
-              </div>
-              <div class="counter answers">
-                <div class="count">4</div>
-                <div class="label">answers</div>
-              </div>
-              <div class="counter views">
-                <div class="count">17</div>
-                <div class="label">views</div>
-              </div>
-            </div>
-
-            <div class="question-right">
-              <h3 class="question-title">
-                <a href="#">Open an existing app from a main one in React?</a>
-              </h3>
-              <div class="question-bottom">
-                <div class="question-tags">
-                  <a href="#" class="q-tag">html</a>
-                  <a href="#" class="q-tag">css</a>
-                  <a href="#" class="q-tag">javascript</a>
-                  <a href="#" class="q-tag">reactjs</a>
-                </div>
-                <div class="question-asked-by">
-                  <div class="asked-by-block">
-                    <div class="last-updated-on">asked 10 minutes ago</div>
-                    <div class="asked-by">
-                      by <a href="#" class="user-name">Arman</a>
-                      <strong class="reputation-score">77</strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="tag-card">
+            <a href="#css" class="tag-name"> css </a>
+            <p class="tag-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              aspernatur ea iste minus, porro sit...
+            </p>
+            <div class="question-count">
+              <span class="total">23647 questions</span>
+              <span class="today">145 asked today</span>
             </div>
           </div>
 
-          <div class="question-asked">
-            <div class="question-left">
-              <div class="counter votes">
-                <div class="count">9</div>
-                <div class="label">votes</div>
-              </div>
-              <div class="counter answers done">
-                <div class="count">4</div>
-                <div class="label">answers</div>
-              </div>
-              <div class="counter views">
-                <div class="count">17</div>
-                <div class="label">views</div>
-              </div>
+          <div class="tag-card new">
+            <a href="#javascript" class="tag-name"> javascript </a>
+            <p class="tag-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              aspernatur ea iste minus, porro sit...
+            </p>
+            <div class="question-count">
+              <span class="total">23647 questions</span>
+              <span class="today">145 asked today</span>
             </div>
+          </div>
 
-            <div class="question-right">
-              <h3 class="question-title">
-                <a href="#">Open an existing app from a main one in React?</a>
-              </h3>
-              <div class="question-bottom">
-                <div class="question-tags">
-                  <a href="#" class="q-tag">html</a>
-                  <a href="#" class="q-tag">css</a>
-                  <a href="#" class="q-tag">javascript</a>
-                  <a href="#" class="q-tag">reactjs</a>
-                </div>
-                <div class="question-asked-by">
-                  <div class="asked-by-block">
-                    <div class="last-updated-on">asked 10 minutes ago</div>
-                    <div class="asked-by">
-                      by <a href="#" class="user-name">Arman</a>
-                      <strong class="reputation-score">77</strong>
-                    </div>
-                  </div>
-                </div>
-              </div>
+          <div class="tag-card">
+            <a href="#php" class="tag-name"> php </a>
+            <p class="tag-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              aspernatur ea iste minus, porro sit...
+            </p>
+            <div class="question-count">
+              <span class="total">23647 questions</span>
+              <span class="today">145 asked today</span>
             </div>
           </div>
         </div>
