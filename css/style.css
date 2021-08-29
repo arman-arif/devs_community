@@ -1215,9 +1215,24 @@ main {
   font-weight: 400 !important;
 }
 
-.hot-interest {
-  font-size: 14px !important;
-  margin-bottom: 20px;
+.question-list .question-asked .question-right .question-bottom .question-tags a.q-tag,
+.question-list .question-asked .question-right .question-bottom .question-tags .q-tag, .tags-list .tag-card .tag-name,
+.tags-list .tag-card a.tag-name {
+  display: inline-block;
+  font-size: 12px !important;
+  border-radius: 3px;
+  background: #dbecf7;
+  color: #2980b9;
+  padding: 5px 7px;
+  margin-right: 2px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+.question-list .question-asked .question-right .question-bottom .question-tags .q-tag:hover, .tags-list .tag-card .tag-name:hover {
+  background: #d2e7f5;
+  color: #003b61;
 }
 
 .question-list {
@@ -1348,21 +1363,11 @@ main {
           justify-content: space-between;
 }
 
-.question-list .question-asked .question-right .question-bottom .question-tags a.q-tag,
-.question-list .question-asked .question-right .question-bottom .question-tags .q-tag {
-  font-size: 12px !important;
-  border-radius: 3px;
-  background: #dbecf7;
-  color: #2980b9;
-  padding: 5px 7px;
-  margin-right: 2px;
-  text-decoration: none;
-}
-
-.question-list .question-asked .question-right .question-bottom .question-tags a.q-tag:hover,
-.question-list .question-asked .question-right .question-bottom .question-tags .q-tag:hover {
-  background: #d2e7f5;
-  color: #003b61;
+@media (max-width: 480px) {
+  .question-list .question-asked .question-right .question-bottom .question-tags a.q-tag,
+  .question-list .question-asked .question-right .question-bottom .question-tags .q-tag {
+    margin-top: 5px !important;
+  }
 }
 
 .question-list .question-asked .question-right .question-bottom .question-asked-by {
@@ -1420,6 +1425,123 @@ main {
 
 .question-list .question-asked.closed .counter.answers .label {
   font-size: 11px !important;
+}
+
+.hot-interest {
+  font-size: 14px !important;
+  margin-bottom: 20px;
+}
+
+.filter-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.filter-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.filter-block svg {
+  width: 18px;
+  position: absolute;
+  top: 7px;
+  left: 13px;
+  color: #5c6a79;
+}
+
+.filter-search {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 5px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  padding: 10px 10px 10px 35px !important;
+  color: #2c3e50;
+  font-size: 14px !important;
+}
+
+.filter-search:focus {
+  border-color: #2c3e50;
+}
+
+.filter-search:focus + svg {
+  color: #2c3e50;
+}
+
+.tags-list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.tags-list .tag-card {
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #bdc3c7;
+}
+
+.tags-list .tag-card .tag-desc {
+  margin-top: 10px;
+  font-size: 12px !important;
+  line-height: 18px;
+}
+
+.tags-list .tag-card .question-count {
+  font-size: 10px !important;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #7f8fa6;
+}
+
+.tags-list .tag-card .question-count .total {
+  text-align: left;
+  margin-right: 2px;
+}
+
+.tags-list .tag-card .question-count .today {
+  text-align: right;
+  margin-left: 2px;
+}
+
+@media (max-width: 1050px) {
+  .tags-list {
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+  }
+  .tags-list .question-count {
+    font-size: 10px !important;
+  }
+}
+
+@media (max-width: 750px) {
+  .tags-list {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .tags-list {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 750px) {
