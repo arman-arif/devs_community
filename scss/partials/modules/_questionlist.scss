@@ -1,3 +1,20 @@
+%tag-style {
+  display: inline-block;
+  font-size: 12px !important;
+  border-radius: 3px;
+  background: lighten($color_blue, 47);
+  color: $color_blue;
+  padding: 5px 7px;
+  margin-right: 2px;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    background: lighten($color_blue, 45);
+    color: #003b61;
+  }
+}
+
 .question-list {
   margin: 0 -30px;
   border-top: 1px solid $color_gray;
@@ -107,19 +124,7 @@
         .question-tags {
           a.q-tag,
           .q-tag {
-            display: inline-block;
-            font-size: 12px !important;
-            border-radius: 3px;
-            background: lighten($color_blue, 47);
-            color: $color_blue;
-            padding: 5px 7px;
-            margin-right: 2px;
-            text-decoration: none;
-
-            &:hover {
-              background: lighten($color_blue, 45);
-              color: #003b61;
-            }
+            @extend %tag-style;
 
             @include response-max(mobile) {
               margin-top: 5px !important;
