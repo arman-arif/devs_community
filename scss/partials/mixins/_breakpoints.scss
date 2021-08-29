@@ -16,3 +16,31 @@ $breakpoints: (
     @content;
   }
 }
+
+@mixin response($breakpoint) {
+  $moblie: map-get($breakpoints, mobile);
+  $desktop: map-get($breakpoints, desktop);
+  $laptop: map-get($breakpoints, laptop);
+  $tablet: map-get($breakpoints, tablet);
+
+  @if $breakpoint == mobile {
+    @media (max-width: $moblie) {
+      @content;
+    }
+  }
+  @if $breakpoint == desktop {
+    @media (min-width: $desktop) {
+      @content;
+    }
+  }
+  @if $breakpoint == laptop {
+    @media (min-width: $laptop) and (max-width: $desktop - 1) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (min-width: $tablet) and (max-width: $laptop - 1) {
+      @content;
+    }
+  }
+}
