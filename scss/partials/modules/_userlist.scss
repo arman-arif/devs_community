@@ -1,0 +1,53 @@
+.users-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+
+  @include response-max(laptop) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include response-max(mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  .user-info {
+    display: flex;
+
+    .user-avater {
+      display: flex;
+      flex-direction: column;
+      margin-right: 10px;
+
+      .user-img {
+        width: 48px;
+        border-radius: 3px;
+      }
+
+      .user-score {
+        padding: 2px 3px;
+        font-size: 14px !important;
+        font-weight: 500;
+        text-align: center;
+      }
+    }
+
+    .user-desc {
+      display: flex;
+      flex-direction: column;
+      .user-name {
+        font-weight: 500;
+      }
+
+      :not(.user-name) {
+        font-size: 13px !important;
+      }
+      .user-location {
+        color: $text_gray;
+      }
+      .user-q-count {
+        color: $color_gray;
+      }
+    }
+  }
+}
