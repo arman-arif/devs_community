@@ -47,6 +47,11 @@
       }
       .user-q-count {
         color: $color_gray;
+
+        .q-asked,
+        .q-answered {
+          display: inline-block;
+        }
       }
     }
   }
