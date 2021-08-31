@@ -1621,6 +1621,11 @@ main {
   color: #bdc3c7;
 }
 
+.users-list .user-info .user-desc .user-q-count .q-asked,
+.users-list .user-info .user-desc .user-q-count .q-answered {
+  display: inline-block;
+}
+
 @media (max-width: 750px) {
   .nav img.logo, .nav nav ul.nav-list li a img.logo-mobile, nav ul.nav-list li a .nav img.logo-mobile {
     display: none !important;
