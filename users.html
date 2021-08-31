@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devs Community</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/feather.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="wrapper">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-link menu-btn" id="toggleMenu">
+                <i data-feather="menu"></i>
+              </a>
+              <a href="#" class="nav-link">
+                <img
+                  class="logo-mobile"
+                  src="assets/logo-mobile.png"
+                  alt="Devs Community"
+                />
+                <img class="logo" src="assets/logo.png" alt="Devs Community" />
+              </a>
+            </li>
+
+            <li class="nav-item login-section">
+              <a href="#login" class="button login outline small"> Log in </a>
+              <a href="#signup" class="button signup small"> Sign up </a>
+
+              <a href="#" class="nav-link">
+                <i data-feather="search"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="wrapper">
+      <div class="sidebar hide">
+        <ul>
+          <li>
+            <a href="index.html"> <i data-feather="home"></i> Home </a>
+          </li>
+          <li>
+            <a href="questions.html">
+              <i data-feather="help-circle"></i> Questions
+            </a>
+          </li>
+          <li>
+            <a href="tags.html"> <i data-feather="tag"></i> Tags </a>
+          </li>
+          <li class="active">
+            <a href="users.html"> <i data-feather="users"></i> Users </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="container">
+        <div class="title-bar">
+          <h1 class="main-title">Tags</h1>
+        </div>
+        <div class="filter-wrap">
+          <div class="filter-block">
+            <input
+              type="search"
+              class="filter-search"
+              placeholder="Filter by tag name"
+            />
+            <i data-feather="search"></i>
+          </div>
+          <div class="hot-interest button-group outline group-right">
+            <a href="#">Populer</a>
+            <a href="#">Name</a>
+            <a href="#">New</a>
+          </div>
+        </div>
+
+        <div class="tags-list">
+          <div class="tag-card">
+            <a href="#html" class="tag-name"> html </a>
+            <p class="tag-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              aspernatur ea iste minus, porro sit...
+            </p>
+            <div class="question-count">
+              <span class="total">23647 questions</span>
+              <span class="today">145 asked today</span>
+            </div>
+          </div>
+
+          <div class="tag-card">
+            <a href="#css" class="tag-name"> css </a>
+            <p class="tag-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              aspernatur ea iste minus, porro sit...
+            </p>
+            <div class="question-count">
+              <span class="total">23647 questions</span>
+              <span class="today">145 asked today</span>
+            </div>
+          </div>
+
+          <div class="tag-card new">
+            <a href="#javascript" class="tag-name"> javascript </a>
+            <p class="tag-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              aspernatur ea iste minus, porro sit...
+            </p>
+            <div class="question-count">
+              <span class="total">23647 questions</span>
+              <span class="today">145 asked today</span>
+            </div>
+          </div>
+
+          <div class="tag-card">
+            <a href="#php" class="tag-name"> php </a>
+            <p class="tag-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+              aspernatur ea iste minus, porro sit...
+            </p>
+            <div class="question-count">
+              <span class="total">23647 questions</span>
+              <span class="today">145 asked today</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
