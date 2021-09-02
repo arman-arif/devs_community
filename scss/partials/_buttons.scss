@@ -29,6 +29,16 @@ input[type="submit"].button {
     font-size: 14px !important;
     font-weight: 400 !important;
   }
+
+  @include response-max(tablet) {
+    &.small-sm {
+      padding: 5px 15px !important;
+      border-radius: 3px !important;
+      font-size: 14px !important;
+      font-weight: 400 !important;
+    }
+  }
+
   &.block {
     display: block !important;
     width: 100%;
