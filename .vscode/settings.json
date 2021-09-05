@@ -17,5 +17,10 @@
   "editor.tabSize": 2,
   "liveSassCompile.settings.forceBaseDirectory": "/scss",
   "liveSassCompile.settings.showOutputWindowOn": "Error",
-  "livePreview.defaultPreviewPath": "/index.html"
+  "livePreview.defaultPreviewPath": "/index.html",
+  "prettier.enable": true,
+  "prettier.printWidth": 120,
+  "[html]": {
+    "editor.formatOnSave": true
+  }
 }
