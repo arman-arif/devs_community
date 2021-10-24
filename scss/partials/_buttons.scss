@@ -44,17 +44,17 @@ input[type="submit"].button {
     width: 100%;
   }
 
-  @each $name, $color in $colors {
-    &.#{$name} {
-      @include button($color);
-    }
-  }
+  // @each $name, $color in $colors {
+  //   &.#{$name} {
+  //     @include button($color);
+  //   }
+  // }
 
-  @each $name, $color in $color-schemes {
-    &.#{$name} {
-      @include button($color);
-    }
-  }
+  // @each $name, $color in $color-schemes {
+  //   &.#{$name} {
+  //     @include button($color);
+  //   }
+  // }
 
   &.signup,
   &.register {

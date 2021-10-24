@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devs Community</title>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css" /> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/base16/solarized-light.min.css"
+    />
+    <script src="js/feather.min.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="wrapper">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="#" class="nav-link menu-btn" id="toggleMenu">
+                <i data-feather="menu"></i>
+              </a>
+              <a href="#" class="nav-link">
+                <img class="logo-mobile" src="assets/logo-mobile.png" alt="Devs Community" />
+                <img class="logo" src="assets/logo.png" alt="Devs Community" />
+              </a>
+            </li>
+
+            <li class="nav-item login-section">
+              <a href="login.html" class="button login small"> Log in </a>
+              <a href="signup.html" class="button signup small"> Sign up </a>
+
+              <a href="#" class="nav-link">
+                <i data-feather="search"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main class="wrapper">
+      
+
+      <div class="container">
+
+        <div class="signup-container">
+          <div class="signup-body">
+            <form class="signup-form" method="POST">
+              <div class="input-group">
+                <label for="email">Email</label>
+                <input type="text" name="email" id="email" placeholder="e.g. youremail@domain.com">
+              </div>
+              <div class="input-group">
+                <div class="label-group">
+                  <label for="password">Password</label>
+                  <a href="#">Forgot password?</a>
+                </div>
+                <input type="text" name="password" id="password" placeholder="********">
+              </div>
+              <div class="input-button">
+                <button type="submit" class="button ask">Log in</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+      </div>
+    </main>
+    <footer></footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>
