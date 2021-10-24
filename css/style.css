@@ -1203,6 +1203,81 @@ form.login-form .input-button button {
   display: block;
 }
 
+.signup-container {
+  width: 100%;
+  height: calc(100vh - 150px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-container .signup-body {
+  background-color: #ffffff;
+  width: 300px;
+  padding: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.06), 0 3px 8px rgba(0, 0, 0, 0.09);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 2px 6px rgba(0, 0, 0, 0.06), 0 3px 8px rgba(0, 0, 0, 0.09);
+  -webkit-transform: translate(-85px);
+          transform: translate(-85px);
+}
+
+form.signup-form label, form.signup-form small {
+  display: block;
+  padding: 2px 0;
+}
+
+form.signup-form label {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+form.signup-form input, form.signup-form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 4px;
+  margin: 3px 0;
+  border: 1px solid #c5d3e2;
+}
+
+form.signup-form .input-group:not(:first-child) {
+  margin: 15px 0;
+}
+
+form.signup-form .label-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+form.signup-form .label-group a {
+  font-size: 12px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+form.signup-form .input-button {
+  width: 100%;
+}
+
+form.signup-form .input-button button {
+  font-size: 14px;
+  font-weight: 400 !important;
+  width: 100% !important;
+  display: block;
+}
+
 @media (max-width: 750px) {
   .nav img.logo, .nav nav ul.nav-list li a img.logo-mobile, nav ul.nav-list li a .nav img.logo-mobile {
     display: none !important;
