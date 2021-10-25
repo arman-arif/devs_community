@@ -5,13 +5,14 @@
     {
       "format": "expanded",
       "extensionName": ".css",
-      "savePath": "/css"
+      "savePath": "/css",
+      
     },
-    {
-      "format": "compressed",
-      "extensionName": ".min.css",
-      "savePath": "/css"
-    }
+    // {
+    //   "format": "compressed",
+    //   "extensionName": ".min.css",
+    //   "savePath": "/css"
+    // }
   ],
   "editor.formatOnSave": true,
   "editor.tabSize": 2,
@@ -22,5 +23,11 @@
   "prettier.printWidth": 120,
   "[html]": {
     "editor.formatOnSave": true
-  }
+  },
+  // "liveSassCompile.settings.excludeList": [
+
+  //   "**/node_modules/**",
+  //   ".vscode/**"
+  // ],
+  "liveSassCompile.settings.autoprefix": [],
 }

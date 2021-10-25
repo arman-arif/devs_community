@@ -17,7 +17,9 @@ button.button,
 input[type="button"].button,
 input[type="submit"].button {
   @extend %button;
+}
 
+.button{
   &:hover {
     cursor: pointer;
     transition: all $short_trans ease;
