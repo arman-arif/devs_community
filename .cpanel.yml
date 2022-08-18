@@ -1,5 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/pqygs36lvwse/devs_community/
+    - export DEPLOYPATH=/home/user/devs_community/
     - /bin/cp -R ./ $DEPLOYPATH
